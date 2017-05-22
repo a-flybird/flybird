@@ -1,0 +1,123 @@
+{% load blog_tags %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>鸟不会飞</title>
+
+		<!-- meta -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    {% load staticfiles %}
+
+	    <!-- css -->
+    	<link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    	<link rel="stylesheet" type="text/css" href="{% static 'blog/css/font-awesome-4.6.3/css/font-awesome.min.css' %}">
+
+	    <!-- js 
+	    <script src="{% static 'blog/js/jquery-2.1.3.min.js' %}"></script>
+    	<script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+    	<script src="{% static 'blog/js/pace.min.js' %}"></script>
+    	<script src="{% static 'blog/js/modernizr.custom.js' %}"></script>
+    	-->
+
+    	
+	</head>
+
+	<body>
+		<div class="container">	
+			<header id="site-header">
+				<div class="logo">
+					<div id="logo"><a href="{% url 'blog:index' %}">鸟不会飞</a></div>
+					<div class="signature">一只没有放弃蹦跶的菜鸟...  <a class="list-group-item" href="#"><i class="fa fa-twitter"></i></a></div>
+				</div>
+				<div class="daohang">
+  					<ul class="navbar-right">
+  						<li class="cl-effect-11"><a href="#" data-hover="Contact">Contact</a></li>
+  						<li class="cl-effect-11"><a href="#" data-hover="About">About</a></li>
+  						<li class="cl-effect-11"><a href="#" data-hover="Blog">Blog</a></li>
+    					<li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="Home">Home</a></li>	
+  					</ul>
+				</div><!-- col-md-8 -->
+			</header>
+		</div>
+
+		<div class="content-body">
+			<div class="container-body">
+				<div class="row">
+					<main class="col-md-8">
+    					{% block main %}
+    					{% endblock main %}
+					</main>
+					<aside class="col-md-4">
+						<div class="widget widget-recent-posts">		
+							<h3 class="widget-title"><i class="fa fa-clock-o"></i> Recent Posts</h3>	
+							{% get_recent_posts as recent_post_list %}	
+							<ul>
+									{% for post in recent_post_list %}
+        							<li>
+            							<a href="{{ post.get_absolute_url }}">> {{ post.title }}</a>
+        							</li>
+        							{% endfor %}
+							</ul>
+						</div>
+						<div class="widget widget-archives">		
+							<h3 class="widget-title"><i class="fa fa-calendar-o"></i> Archives</h3>	
+							{% archives as date_list %}	
+							<ul>
+								{% for date in date_list %}
+    							<li>
+      								<a href="#">> {{ date.year }} 年 {{ date.month }} 月</a>
+   								</li>
+    							{% endfor %}
+							</ul>
+						</div>
+
+						<div class="widget widget-category">		
+							<h3 class="widget-title"><i class="fa fa-tags"></i> Category</h3>		
+							{% get_categories as category_list %}
+  							<ul>
+    							{% for category in category_list %}
+    							<li>
+    								<a href="#">> {{ category.name }}</a>
+    							</li>
+    							{% endfor %}
+							</ul>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+		<footer class="site-footer">
+			<div class="col-md-12">
+				<p class="copyright">Copyright&copy; 2017 flybird. All rights reserved. </p>
+			</div>
+		</footer>
+
+		<!-- Mobile Menu -->
+
+		<!--
+		<div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="full-width.html">Blog</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<script src="{% static 'blog/js/script.js' %}"></script>
+
+		<script type="text/javascript">
+			function form_top(){
+				document.write('<div id="form_top"><a href="#top" title="回到顶部"><div class="top_img"></div></a></div>')
+			}
+			form_top();
+		</script>
+
+-->
+		
+	</body>
+</html>
