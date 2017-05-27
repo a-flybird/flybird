@@ -11,6 +11,8 @@ def post_comment(request, post_pk):
     # 这个函数的作用是当获取的文章（Post）存在时，则获取；否则返回 404 页面给用户
     post = get_object_or_404(Post, pk=post_pk)
 
+
+
     # http 请求有 get 和 post 两种方法，一般用户通过表单提交数据都是通过 post 请求，
     # 因此只有当用户的请求为 post 时才需要处理表单数据
     if request.method == 'POST':
@@ -28,6 +30,15 @@ def post_comment(request, post_pk):
             comment.post = post
             # 最终将评论数据保存进数据库，调用模型实例的 save 方法
             comment.save()
+
+
+
+
+            #评论数 +1
+            comment.increase_commenting()
+
+
+
 
             # 重定向到 post 的详情页
             return redirect(post)

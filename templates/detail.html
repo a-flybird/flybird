@@ -9,7 +9,8 @@
 			<span class="post-category"><a class="list-group-item" href="#"><i class="fa fa-tag"></i> {{ post.category.name }}</a></span>
 			<span class="post-date"><i class="fa fa-clock-o"></i><time class="entry-date" datetime="2012-11-09T23:15:57+00:00"> {{ post.created_time }}</time></span>
 			<span class="post-author"><i class="fa fa-user"></i> {{ post.author }}</span>
-			<span class="comments-link"><a href="#"><i class="fa fa-commenting"></i> 0</a></span>
+			<span class="comments-link"><a href="#"><i class="fa fa-commenting"></i> {{ comment.commenting }}</a></span>
+			<span class="views-count"><a href="#"><i class="fa fa-eye"></i> {{ post.views }}</a></span>
 		</div>
 	</header>
 	<div class="entry-content clearfix">

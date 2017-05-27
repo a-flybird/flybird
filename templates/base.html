@@ -6,11 +6,14 @@
 
 		<!-- meta -->
 		<meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	    {% load staticfiles %}
 
 	    <!-- css -->
-    	<link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    	<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}">
+    	<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style1.css' %}">
+    	<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style2.css' %}">
+    	<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style3.css' %}">
     	<link rel="stylesheet" type="text/css" href="{% static 'blog/css/font-awesome-4.6.3/css/font-awesome.min.css' %}">
 
 	    <!-- js 
@@ -22,15 +25,14 @@
 
     	
 	</head>
-
 	<body>
 		<div class="container">	
 			<header id="site-header">
 				<div class="logo">
 					<div id="logo"><a href="{% url 'blog:index' %}">鸟不会飞</a></div>
-					<div class="signature">一只没有放弃蹦跶的菜鸟...  <a class="list-group-item" href="#"><i class="fa fa-twitter"></i></a></div>
+					<div id="signature">一只没有放弃蹦跶的菜鸟...  <a class="list-group-item" href="#"><i class="fa fa-twitter"></i></a></div>
 				</div>
-				<div class="daohang">
+				<div id="daohang">
   					<ul class="navbar-right">
   						<li class="cl-effect-11"><a href="#" data-hover="Contact">Contact</a></li>
   						<li class="cl-effect-11"><a href="#" data-hover="About">About</a></li>
@@ -40,7 +42,15 @@
 				</div><!-- col-md-8 -->
 			</header>
 		</div>
-
+		<div id="butn" ><a href="#" onClick="daohangchange('daohang_1','butn')" ><i class="fa fa-navicon"></i></a></div>
+		<div id="daohang_1">	
+			<ul class="navbar-right">
+				<li class="cl-effect-11"><a href="{% url 'blog:index' %}" data-hover="Home">Home</a></li>
+  				<li class="cl-effect-11"><a href="#" data-hover="About">About</a></li>
+  				<li class="cl-effect-11"><a href="#" data-hover="Contact">Contact</a></li>
+  				<li class="cl-effect-11"><a href="#" data-hover="Blog">Blog</a></li>		
+  			</ul>
+		</div>
 		<div class="content-body">
 			<div class="container-body">
 				<div class="row">
@@ -48,7 +58,15 @@
     					{% block main %}
     					{% endblock main %}
 					</main>
-					<aside class="col-md-4">
+					<aside id="col-md-4">
+
+						<div class="widget widget-message">
+							<div class="head_1">
+								<img src="/static/blog/img/me.png">
+							</div>
+							<h4 class="signature_1">最美好的场景就是…</h4>
+						</div>
+
 						<div class="widget widget-recent-posts">		
 							<h3 class="widget-title"><i class="fa fa-clock-o"></i> Recent Posts</h3>	
 							{% get_recent_posts as recent_post_list %}	
@@ -60,6 +78,7 @@
         							{% endfor %}
 							</ul>
 						</div>
+
 						<div class="widget widget-archives">		
 							<h3 class="widget-title"><i class="fa fa-calendar-o"></i> Archives</h3>	
 							{% archives as date_list %}	
@@ -95,19 +114,9 @@
 
 		<!-- Mobile Menu -->
 
-		<!--
-		<div class="overlay overlay-hugeinc">
-			<button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="full-width.html">Blog</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
-
+		
+		
+<!--
 		<script src="{% static 'blog/js/script.js' %}"></script>
 
 		<script type="text/javascript">
@@ -118,6 +127,44 @@
 		</script>
 
 -->
-		
+		<script type="text/javascript">
+			daohangchange();
+			window.onresize = function(){
+                daohangchange();
+            }
+			function daohangchange(){
+				var Box=document.body.offsetWidth;
+    			var daohang=document.getElementById('daohang');
+    			var daohang_1=document.getElementById('daohang_1');
+    			var butn=document.getElementById('butn');
+    			var signature=document.getElementById('signature');
+    			var col=document.getElementById('col-md-4');
+
+ 
+    			if (Box<480){
+    				daohang.style.display="none";
+    				signature.style.display="none";
+    				col.style.display="none";
+    				butn.style.display="";
+
+    				if (daohang_1.style.display=="none"){
+                		daohang_1.style.display="block";
+            		}
+            		else{
+                		daohang_1.style.display="none";
+                		
+            		}
+    				
+    			}
+    			else{
+    				daohang_1.style.display="none";
+    				butn.style.display="none";
+    				daohang.style.display="";
+    				col.style.display="";
+    			}
+    		}
+    		
+		</script>
+
 	</body>
 </html>

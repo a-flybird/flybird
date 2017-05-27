@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.six import python_2_unicode_compatible
@@ -99,6 +100,18 @@ class Post(models.Model):
     # 因此这是一对多的关系，
     # 和 Category 类似。
     author = models.ForeignKey(User)
+
+
+
+    # views 字段记录阅读量
+    views = models.PositiveIntegerField(default=0)
+
+    def increase_views(self):
+        self.views += 1
+        self.save(update_fields=['views'])
+
+
+
 
 
     def __str__(self):

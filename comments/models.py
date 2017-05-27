@@ -10,5 +10,21 @@ class Comment(models.Model):
 
     post = models.ForeignKey('blog.Post')
 
+
+
+    # commenting 字段记录评论数
+    commenting = models.PositiveIntegerField(default=0)
+
+    def increase_commenting(self):
+        self.commenting += 1
+        self.save(update_fields=['commenting'])
+
+
+
+
+
     def __str__(self):
         return self.text[:20]
+
+
+

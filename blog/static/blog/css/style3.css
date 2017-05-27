@@ -1,10 +1,10 @@
+@media only screen and (max-width: 479px){
 
-@media only screen and (min-width: 980px) {
 
-* {outline: none;}
 h1, h2, h3, h4, h5, h6{ 
 	margin: 0;
 	font-weight: lighter;
+	font-size: 1em;
 	color: #F0F0F0;
 }
 
@@ -13,7 +13,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'Lato', sans-serif;
-	background: url('/static/blog/img/bj0.jpg') no-repeat fixed;
+	background: url('/static/blog/img/bj2.jpg') no-repeat fixed;
 }
 a {
 	color: #F0F0F0;
@@ -36,52 +36,69 @@ p{
 ul{
 	list-style: none;
 }
+
 .container{
+	position: relative;	
+	z-index: 10;
 	float: left;
-	width: 100%;
-	height: 100px;
+	width: 80%;
+	height: 40px;
 	padding: 0;
-	margin: 10px 0 0 0;
+	margin: 0 0 20px 0;
 }
 #site-header {
-	height: 50px;
+	width: 100%;
+	height: 40px;
 	color: white;
 	padding: 0;
-	margin: 25px;
+	margin: 20px 0 0 0;
 }
 .logo{
 	float: left;
-	width: 50%;
+	width: 80%;
 	margin: 0;
 	padding:0;
 }
 #logo{
+	position: relative;
 	float: left;
-	width: 25%;
-	margin: 0;
+	width: 100%;
+	margin: 0 0 0 1em; 
 	padding: 0;
-	font-size: 1.8em;
+	font-size: 1.5em;
 }
-#signature{
-	float: left;
-	width: 40%;
-	margin: 0;
+#butn{
+	position: relative;
+	float: right;
+	width: 20%;
+	margin: 1.5em 0 0 0;
 	padding: 0;
-	font-size: 0.8em;
-	line-height: 80px;
-	font-family: YouYuan;
-	font-weight: lighter;
-}
-#daohang{
-	float: left;
-	width: 50%;
-	height: 50px;
-	padding: 0;
-	margin: 0;
-}
-#daohang ul{
-	list-style: none;
 	text-align: center;
+
+}
+#daohang_1{
+	position: absolute;
+	z-index: 1000;
+	width: 40%;
+	height: 50%;
+	padding: 0;
+	margin: 3.5em 0 0 60%;
+	background: rgba(130, 200, 250,0.95);
+}
+#daohang_1 ul{
+	overflow: hidden;
+	float: right;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+#daohang_1 li{
+	float: right;
+	width: 100%;
+	height: 40px;
+	margin: 0;
+	padding: 0;	
 }
 .navbar-right{
 	width: 100%;
@@ -92,20 +109,22 @@ ul{
 }
 .cl-effect-11 a{
 	float: right;
-	width: 25%;
-	height: 50px;
-	line-height: 50px;
+	width: 100%;	
+	height: 40px;
+	line-height: 40px;
 }
 .cl-effect-11 a:hover{
-	width: 25%;
-	height: 50px;
-	line-height: 50px;
-	background-color: rgba(0, 0, 0, 0.35);
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: rgba(255, 255, 255,0.25);
 }
 
 
 /**content-body**/
 .content-body{
+	z-index: 10;
+	position: relative;
 	float: left;
 	width: 100%;
 	height: auto;
@@ -120,7 +139,7 @@ ul{
 }
 .col-md-8{
 	float: left;
-	width: 70%;
+	width: 100%;
 	margin: 0;
 	padding: 0
 }
@@ -129,25 +148,24 @@ ul{
 
 .post-1{
 	float: left;
-	width: 80%;
-	margin:20px 10% 0 10%;
+	width: 96%;
+	margin:20px 2% 0 2%;
 	background-color: rgba(0, 0, 0, 0.75);
 	border-radius: 5px;
 }
 .entry-title {
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1em;
 	margin-bottom: 10px;
-	line-height: 1.6;
+	line-height: 1.5;
 	padding: 10px 20px 0;
 	color: #FCFCFC;
 	font-weight: lighter;
 }
 .entry-meta{
 	text-align: center;
-	font-size: 13px;
+	font-size: 0.75em;
 	font-weight: lighter;
-	letter-spacing: 1px;
 	margin-bottom: 10px;
 }
 .post-author{
@@ -157,11 +175,11 @@ ul{
 	color: #66CCFF;
 }
 .entry-content {
-	width: 90%;
-	margin: 0  5%  0  5%;
-	font-size: 14px;
+	width: 96%;
+	margin: 0  2%  0  2%;
+	font-size: 0.8em;
 	font-weight: lighter;
-	color: 	#E0E0E0;
+	color: 	#F5F5F5;
 	text-indent: 2em;
 	line-height: 1.5;
 }
@@ -174,58 +192,25 @@ ul{
 	padding-right: 15px;
 }
 .read-more {
+	font-size: 0.9em;
 	margin-bottom: 10px;
 }
 
 
 
-
-#col-md-4{
-	float: left;
-	width: 20%;
-	margin: 20px 5% 0 5%;
-	padding: 0;
-	background-color: rgba(0, 0, 0, 0.75);
-	border-radius: 5px;
-	font-weight: lighter;
-}
-.widget{
-	float: left;
-	width: 90%;
-	margin: 10px 5% 0 5%;	
-}
-.widget ul{
-	margin: 10px auto 20px 30px;
-	padding:0;
-}
-.head_1{
-	width: 50%;
-	margin: 30px auto 20px 25%;
-}
-.head_1 img{
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-}
-.signature_1{
-	text-align: center;
-	color: white;
-	margin-bottom: 30px;
-	font-size: 15px;
-}
 .comment-list{
 	list-style: none;
-	width: 90%;
-	margin: 10px  5%  0  5%;
+	width: 92%;
+	margin: 10px  4%  0  4%;
 	font-size: 12px;
 	font-weight: lighter;
 	line-height: 1.5;
-	color: 	#E0E0E0;
+	color: 	#F8F8FF;
 	text-indent: 2em;
 }
 .list-unstyled{
 	width: 100%;
-	margin: 10px auto 10px 0;
+	margin: 10px auto 0 0;
 	padding: 0;
 	text-indent: 2em;
 }
@@ -253,6 +238,7 @@ ul{
 	overflow: hidden;
 	background-color: #CCCCCC;
 }
+
 .comment-form{
 	float: left;
 	width: 90%;
@@ -261,14 +247,14 @@ ul{
 }
 .row_comment{
 	float: left;
-	width: 90%;
-	margin: 10px 5% 0 5%;
+	width: 96%;
+	margin: 10px 2% 0 2%;
 	padding: 0;
 }
 .col-md-5{
 	float: left;
 	width: 100%;
-	height: 50px;
+	height: 35px;
 	margin: 20px 0 0 0;
 	padding: 0;
 	color: #909090;
@@ -277,7 +263,7 @@ ul{
 #id_name,
 #id_email{
 	float: left;
-	width: 50%;
+	width: 80%;
 	height: 30px;
 	margin: 0;
 	padding: 0;
@@ -285,7 +271,7 @@ ul{
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	border-bottom-width: 1px;
+	border-bottom-width: 0.5px;
 	border-bottom-style: solid;
 	border-bottom-color:white;
 	font-family:Arial, Helvetica, sans-serif;
@@ -310,16 +296,16 @@ ul{
 .button{
 	float: left;
 	width: 100%;
-	margin: 120px 0 20px 0;
+	margin: 140px 0 20px 0;
 }
 .button button{
-	width: 30%;	
-	height: 40px;
+	width: 25%;	
+	height: 30px;
 	margin: 0 50% 0 0;
 	background: rgba(255, 255, 255, 0.25);
 	border: 1px solid rgba(255, 255, 255, 0.25);
 	color:#CCCCCC;
-	font-size:14px;
+	font-size:12px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:normal;
 	float:left;
@@ -334,6 +320,10 @@ ul{
 	font-size: 10px;
 	color: 	#F0F0F0;
 }
+
+
+
+
 .site-footer{
 	float: left;
 	width: 100%;
@@ -345,24 +335,4 @@ ul{
 	color: white;
 }
 
-
-/**
-
-#form_top{
-	display: block;
-	bottom: 5px;
-	left: 25px;
-	position: fixed;
-	color: #ECD672;
 }
-.top_img{
-	background-color: black;
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-}
-**/
-
-
-}
-

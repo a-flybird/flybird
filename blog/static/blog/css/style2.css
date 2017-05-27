@@ -1,10 +1,10 @@
-
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 480px) and (max-width: 768px){
 
 * {outline: none;}
 h1, h2, h3, h4, h5, h6{ 
 	margin: 0;
 	font-weight: lighter;
+	font-size: 0.8em;
 	color: #F0F0F0;
 }
 
@@ -13,7 +13,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'Lato', sans-serif;
-	background: url('/static/blog/img/bj0.jpg') no-repeat fixed;
+	background: url('/static/blog/img/bj1.jpg') no-repeat fixed;
 }
 a {
 	color: #F0F0F0;
@@ -41,13 +41,13 @@ ul{
 	width: 100%;
 	height: 100px;
 	padding: 0;
-	margin: 10px 0 0 0;
+	margin: 0;
 }
 #site-header {
-	height: 50px;
+	height: 30px;
 	color: white;
 	padding: 0;
-	margin: 25px;
+	margin: 20px auto auto 10px;
 }
 .logo{
 	float: left;
@@ -57,25 +57,25 @@ ul{
 }
 #logo{
 	float: left;
-	width: 25%;
+	width: 35%;
 	margin: 0;
 	padding: 0;
-	font-size: 1.8em;
+	font-size: 1.2em;
 }
 #signature{
 	float: left;
-	width: 40%;
+	width: 65%;
 	margin: 0;
 	padding: 0;
-	font-size: 0.8em;
-	line-height: 80px;
+	font-size: 0.6em;
+	line-height: 60px;
 	font-family: YouYuan;
 	font-weight: lighter;
 }
 #daohang{
 	float: left;
 	width: 50%;
-	height: 50px;
+	height: 40px;
 	padding: 0;
 	margin: 0;
 }
@@ -89,18 +89,21 @@ ul{
 	padding: 0;
 	margin: 0;
 	vertical-align: middle;	
+	font-size: 0.8em;
 }
 .cl-effect-11 a{
 	float: right;
 	width: 25%;
-	height: 50px;
-	line-height: 50px;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 2px;
 }
 .cl-effect-11 a:hover{
 	width: 25%;
-	height: 50px;
-	line-height: 50px;
+	height: 35px;
+	line-height: 35px;
 	background-color: rgba(0, 0, 0, 0.35);
+	border-radius: 2px;
 }
 
 
@@ -126,29 +129,28 @@ ul{
 }
 
 
-
 .post-1{
 	float: left;
-	width: 80%;
-	margin:20px 10% 0 10%;
+	width: 96%;
+	margin:15px 2% 0 2%;
 	background-color: rgba(0, 0, 0, 0.75);
-	border-radius: 5px;
+	border-radius: 3px;
 }
 .entry-title {
 	text-align: center;
 	font-size: 1.2em;
-	margin-bottom: 10px;
-	line-height: 1.6;
+	margin-bottom: 8px;
+	line-height: 1.5;
 	padding: 10px 20px 0;
 	color: #FCFCFC;
 	font-weight: lighter;
 }
 .entry-meta{
 	text-align: center;
-	font-size: 13px;
+	font-size: 12px;
 	font-weight: lighter;
-	letter-spacing: 1px;
-	margin-bottom: 10px;
+	letter-spacing: 0.2px;
+	margin-bottom: 5px;
 }
 .post-author{
 	color: #FFB3FF;
@@ -157,33 +159,33 @@ ul{
 	color: #66CCFF;
 }
 .entry-content {
-	width: 90%;
-	margin: 0  5%  0  5%;
-	font-size: 14px;
+	width: 92%;
+	margin: 0  4%  0  4%;
+	padding: 0;
+	font-size: 0.75em;
+	line-height: 1.2;
 	font-weight: lighter;
 	color: 	#E0E0E0;
 	text-indent: 2em;
-	line-height: 1.5;
 }
 .post-category,
 .post-date,
 .post-author,
 .comments-link,	
 .views-count{
-
-	padding-right: 15px;
+	padding-right: 10px;
 }
 .read-more {
-	margin-bottom: 10px;
+	margin-bottom: 8px;
+	font-size: 0.9em;
 }
-
 
 
 
 #col-md-4{
 	float: left;
-	width: 20%;
-	margin: 20px 5% 0 5%;
+	width: 26%;
+	margin: 15px 2% 0 2%;
 	padding: 0;
 	background-color: rgba(0, 0, 0, 0.75);
 	border-radius: 5px;
@@ -192,11 +194,12 @@ ul{
 .widget{
 	float: left;
 	width: 90%;
-	margin: 10px 5% 0 5%;	
+	margin: 8px 5% 0 5%;	
 }
 .widget ul{
 	margin: 10px auto 20px 30px;
 	padding:0;
+	font-size: 0.75em;
 }
 .head_1{
 	width: 50%;
@@ -211,12 +214,14 @@ ul{
 	text-align: center;
 	color: white;
 	margin-bottom: 30px;
-	font-size: 15px;
+	font-size: 0.7em;
 }
+
+
 .comment-list{
 	list-style: none;
-	width: 90%;
-	margin: 10px  5%  0  5%;
+	width: 92%;
+	margin: 10px  4%  0  4%;
 	font-size: 12px;
 	font-weight: lighter;
 	line-height: 1.5;
@@ -225,7 +230,7 @@ ul{
 }
 .list-unstyled{
 	width: 100%;
-	margin: 10px auto 10px 0;
+	margin: 10px auto 0;
 	padding: 0;
 	text-indent: 2em;
 }
@@ -253,6 +258,7 @@ ul{
 	overflow: hidden;
 	background-color: #CCCCCC;
 }
+
 .comment-form{
 	float: left;
 	width: 90%;
@@ -261,14 +267,14 @@ ul{
 }
 .row_comment{
 	float: left;
-	width: 90%;
-	margin: 10px 5% 0 5%;
+	width: 96%;
+	margin: 10px 2% 0 2%;
 	padding: 0;
 }
 .col-md-5{
 	float: left;
 	width: 100%;
-	height: 50px;
+	height: 35px;
 	margin: 20px 0 0 0;
 	padding: 0;
 	color: #909090;
@@ -277,7 +283,7 @@ ul{
 #id_name,
 #id_email{
 	float: left;
-	width: 50%;
+	width: 70%;
 	height: 30px;
 	margin: 0;
 	padding: 0;
@@ -285,7 +291,7 @@ ul{
 	border-top: none;
 	border-right: none;
 	border-left: none;
-	border-bottom-width: 1px;
+	border-bottom-width: 0.5px;
 	border-bottom-style: solid;
 	border-bottom-color:white;
 	font-family:Arial, Helvetica, sans-serif;
@@ -310,16 +316,16 @@ ul{
 .button{
 	float: left;
 	width: 100%;
-	margin: 120px 0 20px 0;
+	margin: 140px 0 20px 0;
 }
 .button button{
-	width: 30%;	
-	height: 40px;
+	width: 25%;	
+	height: 30px;
 	margin: 0 50% 0 0;
 	background: rgba(255, 255, 255, 0.25);
 	border: 1px solid rgba(255, 255, 255, 0.25);
 	color:#CCCCCC;
-	font-size:14px;
+	font-size:12px;
 	font-family:Arial, Helvetica, sans-serif;
 	font-weight:normal;
 	float:left;
@@ -334,6 +340,10 @@ ul{
 	font-size: 10px;
 	color: 	#F0F0F0;
 }
+
+
+
+
 .site-footer{
 	float: left;
 	width: 100%;
@@ -346,23 +356,11 @@ ul{
 }
 
 
-/**
 
-#form_top{
-	display: block;
-	bottom: 5px;
-	left: 25px;
-	position: fixed;
-	color: #ECD672;
-}
-.top_img{
-	background-color: black;
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-}
-**/
+
+
+
+
 
 
 }
-
